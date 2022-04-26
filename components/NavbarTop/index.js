@@ -1,26 +1,28 @@
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import Link from "next/link";
+import { Navbar, Container, Nav } from "react-bootstrap";
+import MainLogo from "../MainLogo";
 
 export default function NavbarTop() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Link href="/" passHref>
+          <Navbar.Brand href="#home" className="me-5">
+            Fimarq Propiedades
+          </Navbar.Brand>
+        </Link>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+
+        <Navbar.Collapse id="basic-navbar-nav" className="ms-5">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Link href="/" passHref>
+              <Nav.Link>Inicio</Nav.Link>
+            </Link>
+
+            <Link href="/about" passHref>
+              <Nav.Link>Acerca de</Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

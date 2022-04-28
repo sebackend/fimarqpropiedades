@@ -20,9 +20,9 @@ export default function NavbarTop() {
               <Nav.Link>Inicio</Nav.Link>
             </Link>
 
-            <Link href="/about" passHref>
+            {/* <Link href="/about" passHref>
               <Nav.Link>Acerca de</Nav.Link>
-            </Link>
+            </Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

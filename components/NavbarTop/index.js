@@ -1,13 +1,19 @@
 import Link from "next/link";
 import MainLogo from "../MainLogo";
+import { useRouter } from "next/router";
 
 export default function NavbarTop() {
+  const router = useRouter();
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Navbar
-        </a>
+        <Link href="/" passHref>
+          <span className="navbar-brand me-5 clickable">
+            Fimarq Propiedades
+          </span>
+        </Link>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -21,17 +27,29 @@ export default function NavbarTop() {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
+            <li className="nav-item clickable">
+              <Link href="/" passHref>
+                <span
+                  className={
+                    router.pathname == "/" ? "nav-link active" : "nav-link"
+                  }
+                >
+                  Inicio
+                </span>
+              </Link>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Link
-              </a>
+            <li className="nav-item clickable">
+              <Link href="/about" passHref>
+                <span
+                  className={
+                    router.pathname == "/about" ? "nav-link active" : "nav-link"
+                  }
+                >
+                  Acerca de
+                </span>
+              </Link>
             </li>
-            <li className="nav-item dropdown">
+            {/* <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
@@ -59,17 +77,7 @@ export default function NavbarTop() {
                   </a>
                 </li>
               </ul>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link disabled"
-                href="#"
-                tabIndex="-1"
-                aria-disabled="true"
-              >
-                Disabled
-              </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

@@ -6,7 +6,7 @@ export default function LogoHeader() {
       <div className="container-fluid">
         <div className="row">
           <div className="col-12 text-center">
-            <MainLogo width={280} height={280} className="mx-auto d-block" />
+            <MainLogo width={220} height={220} className="mx-auto d-block" />
           </div>
         </div>
       </div>

@@ -20,7 +20,16 @@
 }
 
 .logo-header {
-  border-bottom: 2px solid #aeaeae;
+  border-bottom: 1px solid #aeaeae;
+  height: 200px;
+}
+
+.carousel-caption {
+  background-color: #7e1e17;
+  opacity: 0.8;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
 @media (min-width: 700px) {

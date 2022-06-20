@@ -8,7 +8,11 @@ export default function About() {
       </Head>
 
       <main>
-        <h1>Welcome</h1>
+        <section className="row">
+          <div className="col-12">
+            <h1>Somos Fimarq Propiedades</h1>
+          </div>
+        </section>
       </main>
     </div>
   );

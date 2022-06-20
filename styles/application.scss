@@ -24,7 +24,7 @@
 }
 
 .logo-header {
-  border-bottom: 1px solid #aeaeae;
+  border-bottom: 1px solid #f3f3f3;
   height: 200px;
 }
 
@@ -68,7 +68,12 @@
 
 .properties-container{
   background-color: #7e1e17;
-  padding: 2rem;
+  padding: 5rem 2rem;
+  margin-top: 5rem;
+}
+
+.property-photo {
+  margin-top: 15px;
 }
 
 @media (min-width: 700px) {

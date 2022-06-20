@@ -1,6 +1,8 @@
 import Head from "next/head";
 import NavbarTop from "../NavbarTop";
 import Footer from "../Footer";
+import Header from "../Header";
+import LogoHeader from "../LogoHeader";
 
 const Layout = ({ children }) => {
   return (
@@ -18,6 +20,9 @@ const Layout = ({ children }) => {
           rel="stylesheet"
         />
       </Head>
+
+      <Header />
+      <LogoHeader />
       <NavbarTop />
       <div className="container-fluid">{children}</div>
       <Footer />

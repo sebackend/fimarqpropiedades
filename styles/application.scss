@@ -1,10 +1,40 @@
 @import 'bootstrap/scss/bootstrap.scss';
-
+@import 'bootstrap.css';
 
 .clickable{
   cursor: pointer;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', 'sans-serif';
+.main-header {
+  height: 85px;
+  background-color: black;
+  padding: 15px;
+  
+  .text-address-container, .text-email-container {
+    text-align: center;
+  }
+}
+
+.text-address, .text-email {
+  font-size: 10px;
+}
+
+.logo-header {
+  border-bottom: 2px solid #aeaeae;
+}
+
+@media (min-width: 700px) {
+  .main-header {
+    height: 55px;
+    background-color: black;
+    padding: 15px;
+  }
+
+  .text-address-container, .text-email-container {
+    text-align: end;
+  }
+
+  .text-address, .text-email {
+    font-size: 16px;
+  }
 }

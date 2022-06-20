@@ -18,7 +18,7 @@ export default function Home() {
             backgroundSize: "cover",
           }}
         >
-          <div className="container">
+          <div className="container mt-5">
             <div className="row">
               <div className="col-12">
                 <h1 className="text-white">
@@ -38,6 +38,11 @@ export default function Home() {
 
         <div className="col-12 h-100">
           <h1 className="text-center">Sitio web en construcción</h1>
+
+          <p className="lead">
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor.
+          </p>
         </div>
       </main>
     </>

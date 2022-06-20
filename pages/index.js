@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
 import Carousel from "../components/Carousel";
 import ServicesList from "../components/ServicesList";
+import Properties from "../components/Properties";
 
 export default function Home() {
   return (
@@ -19,6 +19,10 @@ export default function Home() {
 
         <div className="col-12 mt-55">
           <ServicesList />
+        </div>
+
+        <div className="col-12 mt-55">
+          <Properties />
         </div>
       </main>
     </>

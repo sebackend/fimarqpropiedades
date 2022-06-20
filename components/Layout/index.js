@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
       <NavbarTop />
       <div className="container-fluid main-container">{children}</div>
       <Footer />
-      <WhatsappButton phoneNumber={"+56995974534"} />
+      <WhatsappButton phoneNumber={"+56952294649"} />
     </>
   );
 };

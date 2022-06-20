@@ -1,5 +1,9 @@
-@import 'bootstrap/scss/bootstrap.scss';
+// @import 'bootstrap/scss/bootstrap.scss';
 @import 'bootstrap.css';
+
+.main-container {
+  padding-bottom: 20rem;
+}
 
 .clickable{
   cursor: pointer;
@@ -30,6 +34,10 @@
   right: 0;
   left: 0;
   bottom: 0;
+}
+
+.mt-55 {
+  margin-top: 5rem;
 }
 
 @media (min-width: 700px) {

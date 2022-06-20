@@ -28,8 +28,7 @@ export default function Carousel() {
         </div>
 
         <div className="carousel-inner">
-          <div className="carousel-item active">
-            {/* <img src="/slide1.jpeg" className="d-block w-100" /> */}
+          <div className="carousel-item active" data-bs-interval="10000">
             <div>
               <Image
                 src="/slide1.png"
@@ -44,8 +43,7 @@ export default function Carousel() {
               <p>Te ayudamos a gestionar la compra o venta de tu inmmueble</p>
             </div>
           </div>
-          <div className="carousel-item">
-            {/* <img src="/slide2.jpeg" className="d-block w-100" /> */}
+          <div className="carousel-item" data-bs-interval="10000">
             <div>
               <Image
                 src="/slide2.png"
@@ -61,8 +59,7 @@ export default function Carousel() {
             </div>
           </div>
 
-          <div className="carousel-item">
-            {/* <img src="/slide2.jpeg" className="d-block w-100" /> */}
+          <div className="carousel-item" data-bs-interval="10000">
             <div>
               <Image
                 src="/slide3.jpeg"

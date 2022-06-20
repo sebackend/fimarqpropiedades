@@ -40,6 +40,32 @@
   margin-top: 5rem;
 }
 
+.wsp-button-wrapper {
+  z-index: 0;
+  right: 20px;
+  left: auto;
+  display: initial;
+  position: fixed;
+  bottom: 15px;
+  font-size: 16px;
+  transition: bottom 0.2s ease 0s;
+}
+
+.wsp-logo-container {
+  height: 70px;
+  width: 70px;
+  background-color: rgb(37, 211, 102);
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 1px 1px 4px rgb(60 60 60 / 40%);
+  transition: box-shadow .2s;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 700px) {
   .main-header {
     height: 55px;

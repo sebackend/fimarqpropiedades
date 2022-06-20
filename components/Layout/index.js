@@ -3,6 +3,7 @@ import NavbarTop from "../NavbarTop";
 import Footer from "../Footer";
 import Header from "../Header";
 import LogoHeader from "../LogoHeader";
+import WhatsappButton from "../WhatsappButton";
 
 const Layout = ({ children }) => {
   return (
@@ -26,6 +27,7 @@ const Layout = ({ children }) => {
       <NavbarTop />
       <div className="container-fluid main-container">{children}</div>
       <Footer />
+      <WhatsappButton phoneNumber={"+56995974534"} />
     </>
   );
 };

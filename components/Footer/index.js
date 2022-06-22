@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Map from "../Map";
+import LocationMap from "../LocationMap";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -102,7 +102,14 @@ export default function Footer() {
           </div>
 
           <div className="col-4 offset-1">
-            <Map />
+            <LocationMap
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAk3d99G0eD62J5RpLkixQGI2oDjJOQ4g"
+              loadingElement={<div style={{ height: `100%` }} />}
+              containerElement={
+                <div style={{ height: "350px", width: "100%" }} />
+              }
+              mapElement={<div style={{ height: `100%` }} />}
+            />
           </div>
         </div>
 

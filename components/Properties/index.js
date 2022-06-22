@@ -27,7 +27,7 @@ export default function Properties() {
               <div className="card">
                 <Image
                   src={`/parcelas/${index + 1}.jpg`}
-                  class="card-img-top"
+                  className="card-img-top"
                   alt={`Parcelas imagen ${image}`}
                   width={300}
                   height={250}

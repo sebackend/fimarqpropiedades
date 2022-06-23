@@ -11,11 +11,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="container footer-container">
-      <footer className="py-5">
+    <div className="container-fluid footer-container">
+      <footer className="main-footer">
         <div className="row">
-          <div className="col-6">
-            <h4>Síguenos en Redes sociales</h4>
+          <div className="col-12 col-md-6">
+            <h4 className="text-white">Síguenos en Redes sociales</h4>
             <ul className="nav flex-column mt-5">
               <li className="nav-item mb-2">
                 <a
@@ -26,11 +26,13 @@ export default function Footer() {
                 >
                   <FontAwesomeIcon
                     icon={faFacebookSquare}
-                    color="black"
+                    color="white"
                     size="3x"
                   />
 
-                  <span className="h5 ms-3">/fimarqpropiedades</span>
+                  <span className="h5 ms-3 text-muted social-text">
+                    /fimarqpropiedades
+                  </span>
                 </a>
               </li>
               <li className="nav-item mb-2">
@@ -42,10 +44,12 @@ export default function Footer() {
                 >
                   <FontAwesomeIcon
                     icon={faInstagramSquare}
-                    color="black"
+                    color="white"
                     size="3x"
                   />
-                  <span className="h5 ms-3">/fimarqpropiedades</span>
+                  <span className="h5 ms-3 text-muted social-text">
+                    /fimarqpropiedades
+                  </span>
                 </a>
               </li>
               <li className="nav-item mb-2">
@@ -57,21 +61,25 @@ export default function Footer() {
                 >
                   <FontAwesomeIcon
                     icon={faWhatsappSquare}
-                    color="black"
+                    color="white"
                     size="3x"
                   />
-                  <span className="h5 ms-3">+569 52294649</span>
+                  <span className="h5 ms-3 text-muted social-text">
+                    +569 52294649
+                  </span>
                 </a>
               </li>
             </ul>
           </div>
 
-          <div className="col-6">
+          <div className="col-12 col-md-6 location-map-container">
             <div>
-              <FontAwesomeIcon icon={faLocationPin} color="black" />
-              <span className="mx-2 text-address">
-                Serrano 264 Oficina 225, Melipilla
-              </span>
+              <h4 className="text-address">
+                <FontAwesomeIcon icon={faLocationPin} color="white" />
+                <span className="mx-2 text-white">
+                  Serrano 264 Oficina 225, Melipilla
+                </span>
+              </h4>
             </div>
 
             <LocationMap
@@ -85,7 +93,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="d-flex justify-content-between py-4 my-4 border-top">
+        <div className="d-flex justify-content-between py-4 my-4">
           <p>© {currentYear} Fimarq Propiedades.</p>
           <ul className="list-unstyled d-flex">
             <li className="ms-3">

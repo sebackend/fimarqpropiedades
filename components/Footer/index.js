@@ -20,7 +20,7 @@ export default function Footer() {
               <li className="nav-item mb-2">
                 <a
                   href="https://es-la.facebook.com/fimarqpropiedades"
-                  className="nav-link p-0 text-muted"
+                  className="p-0 text-muted social-link"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -38,7 +38,7 @@ export default function Footer() {
               <li className="nav-item mb-2">
                 <a
                   href="https://www.instagram.com/fimarqpropiedades/?hl=es"
-                  className="nav-link p-0 text-muted"
+                  className="p-0 text-muted social-link"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -55,7 +55,7 @@ export default function Footer() {
               <li className="nav-item mb-2">
                 <a
                   href="https://wa.me/+56952294649"
-                  className="nav-link p-0 text-muted"
+                  className="p-0 text-muted social-link"
                   target="_blank"
                   rel="noreferrer"
                 >

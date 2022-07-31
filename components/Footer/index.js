@@ -82,14 +82,7 @@ export default function Footer() {
               </h4>
             </div>
 
-            <LocationMap
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAk3d99G0eD62J5RpLkixQGI2oDjJOQ4g"
-              loadingElement={<div style={{ height: `100%` }} />}
-              containerElement={
-                <div style={{ height: "350px", width: "100%" }} />
-              }
-              mapElement={<div style={{ height: `100%` }} />}
-            />
+            <LocationMap />
           </div>
         </div>
 

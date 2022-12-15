@@ -2,9 +2,6 @@ import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 
 export default function About({ aboutUs }) {
-  console.log("ABOUT US");
-  console.log(aboutUs);
-
   return (
     <div>
       <Head>

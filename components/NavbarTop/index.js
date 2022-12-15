@@ -5,7 +5,7 @@ export default function NavbarTop() {
   const router = useRouter();
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light">
+    <nav className="navbar navbar-expand-lg navbar-light main-navbar">
       <div className="container-fluid">
         <button
           className="navbar-toggler"
@@ -32,13 +32,28 @@ export default function NavbarTop() {
               </Link>
             </li>
             <li className="nav-item clickable">
-              <Link href="/about" passHref>
+              <Link href="/acerca-de" passHref>
                 <span
                   className={
-                    router.pathname == "/about" ? "nav-link active" : "nav-link"
+                    router.pathname == "/acerca-de"
+                      ? "nav-link active"
+                      : "nav-link"
                   }
                 >
                   Acerca de
+                </span>
+              </Link>
+            </li>
+            <li className="nav-item clickable">
+              <Link href="/propiedades" passHref>
+                <span
+                  className={
+                    router.pathname == "/propiedades"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
+                >
+                  Propiedades
                 </span>
               </Link>
             </li>

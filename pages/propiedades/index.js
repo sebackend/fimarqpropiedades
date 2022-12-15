@@ -4,13 +4,13 @@ export default function About() {
   return (
     <div>
       <Head>
-        <title>Acerca de</title>
+        <title>Nuestras Propiedades</title>
       </Head>
 
       <main>
-        <section className="row">
+        <section className="row mt-6">
           <div className="col-12">
-            <h1>Somos Fimarq Propiedades</h1>
+            <h1 className="text-center">Nuestras Propiedades</h1>
           </div>
         </section>
       </main>

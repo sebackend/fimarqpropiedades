@@ -36,6 +36,18 @@
   bottom: 0;
 }
 
+.mt-6 {
+  margin-top: 6rem !important;
+}
+
+.mt-7 {
+  margin-top: 7rem !important;
+}
+
+.mt-8 {
+  margin-top: 8rem !important;
+}
+
 .mt-55 {
   margin-top: 5rem;
 }
@@ -133,4 +145,8 @@
   .location-map-container {
     margin-top: 0;
   }
+}
+
+.main-navbar {
+  border-bottom: 1px solid #f3f3f3;
 }

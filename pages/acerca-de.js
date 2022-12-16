@@ -10,11 +10,7 @@ export default function About({ aboutUs }) {
 
       <main>
         <section className="row mt-6">
-          <div className="col-12">
-            <h1 className="text-center">Somos Fimarq Propiedades</h1>
-          </div>
-
-          <div className="col-12 mt-6 p-5">
+          <div className="col-12 p-5">
             <ReactMarkdown children={aboutUs} />
           </div>
         </section>

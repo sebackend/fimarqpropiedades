@@ -1,7 +1,9 @@
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 
-export default function About({ aboutUs }) {
+export default function About({ company }) {
+  const { acerca_de } = company;
+
   return (
     <div>
       <Head>
@@ -11,7 +13,7 @@ export default function About({ aboutUs }) {
       <main>
         <section className="row mt-6">
           <div className="col-12 p-5">
-            <ReactMarkdown children={aboutUs} />
+            <ReactMarkdown children={acerca_de} />
           </div>
         </section>
       </main>
@@ -21,7 +23,7 @@ export default function About({ aboutUs }) {
 
 export const getStaticProps = async () => {
   const response = await fetch(
-    "https://fimarq-strapi-server.onrender.com/api/about-uses",
+    "https://fimarq-strapi-server.onrender.com/api/companies",
     {
       headers: {
         Authorization:
@@ -34,7 +36,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      aboutUs: data?.data ? data?.data[0]?.attributes?.content || "" : "",
+      company: data?.data ? data.data[0].attributes : null,
     },
   };
 };

@@ -2,8 +2,6 @@ import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 
 export default function About({ company }) {
-  const { acerca_de } = company;
-
   return (
     <div>
       <Head>
@@ -11,9 +9,11 @@ export default function About({ company }) {
       </Head>
 
       <main>
-        <section className="row mt-6">
+        <section className="row mt-5">
           <div className="col-12 p-5">
-            <ReactMarkdown>{acerca_de}</ReactMarkdown>
+            {company?.acerca_de ? (
+              <ReactMarkdown>{company.acerca_de}</ReactMarkdown>
+            ) : null}
           </div>
         </section>
       </main>
@@ -36,7 +36,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      company: data?.data ? data.data[0].attributes : null,
+      company: data?.data ? data.data[0].attributes : {},
     },
     revalidate: 150,
   };

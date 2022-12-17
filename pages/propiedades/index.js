@@ -44,5 +44,6 @@ export const getStaticProps = async () => {
     props: {
       properties: data?.data ? data?.data || [] : [],
     },
+    revalidate: 150,
   };
 };

@@ -38,5 +38,6 @@ export const getStaticProps = async () => {
     props: {
       company: data?.data ? data.data[0].attributes : null,
     },
+    revalidate: 150,
   };
 };

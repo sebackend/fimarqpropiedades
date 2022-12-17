@@ -13,7 +13,7 @@ export default function About({ company }) {
       <main>
         <section className="row mt-6">
           <div className="col-12 p-5">
-            <ReactMarkdown children={acerca_de} />
+            <ReactMarkdown>{acerca_de}</ReactMarkdown>
           </div>
         </section>
       </main>

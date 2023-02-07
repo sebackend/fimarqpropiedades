@@ -9,7 +9,7 @@ export default function Header() {
           <div className="col-12 col-md-6 text-address-container">
             <FontAwesomeIcon icon={faLocationPin} color="white" />
             <span className="mx-2 text-light text-address">
-              Serrano 264 Oficina 225, Melipilla
+              Serrano 334, Oficina 306 Melipilla
             </span>
           </div>
 

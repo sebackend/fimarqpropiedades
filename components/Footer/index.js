@@ -77,7 +77,7 @@ export default function Footer() {
               <h4 className="text-address">
                 <FontAwesomeIcon icon={faLocationPin} color="white" />
                 <span className="mx-2 text-white">
-                  Serrano 264 Oficina 225, Melipilla
+                  Serrano 334, Oficina 306 Melipilla
                 </span>
               </h4>
             </div>

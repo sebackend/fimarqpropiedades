@@ -8,9 +8,9 @@ import {
   faBath,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function PropertyCard({ id, property }) {
+export default function PropertyCard({ slug, property }) {
   return (
-    <Link href="/propiedades/[id]" as={`/propiedades/${id}`} passHref>
+    <Link href="/propiedades/[id]" as={`/propiedades/${slug}`} passHref>
       <a className="property-card">
         <div className="card mb-3">
           {property?.portada?.data?.attributes?.url ? (

@@ -2,6 +2,8 @@ import Head from "next/head";
 import PropertyCard from "../../components/PropertyCard";
 
 export default function Properties({ properties }) {
+  console.log("properties");
+  console.log(properties);
   return (
     <div>
       <Head>
@@ -18,7 +20,10 @@ export default function Properties({ properties }) {
         <section className="row mt-3 p-5">
           {properties.map((property) => (
             <div className="col-12 col-md-4" key={property.id}>
-              <PropertyCard id={property.id} property={property.attributes} />
+              <PropertyCard
+                slug={property.attributes.slug}
+                property={property.attributes}
+              />
             </div>
           ))}
         </section>

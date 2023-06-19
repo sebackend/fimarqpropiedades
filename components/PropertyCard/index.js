@@ -10,7 +10,7 @@ import {
 
 export default function PropertyCard({ slug, property }) {
   return (
-    <Link href="/propiedades/[id]" as={`/propiedades/${slug}`} passHref>
+    <Link href="/propiedades/[slug]" as={`/propiedades/${slug}`} passHref>
       <a className="property-card">
         <div className="card mb-3">
           {property?.portada?.data?.attributes?.url ? (

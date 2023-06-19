@@ -36,7 +36,10 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      company: data?.data ? data.data[0].attributes : {},
+      company:
+        data?.data && data.data[0] && data.data[0]?.attributes
+          ? data.data[0].attributes
+          : {},
     },
     revalidate: 150,
   };

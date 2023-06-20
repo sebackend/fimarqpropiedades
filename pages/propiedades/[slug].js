@@ -2,6 +2,7 @@ import Head from "next/head";
 import PropertyDetail from "../../components/PropertyDetail";
 
 export default function Property({ property }) {
+  console.log(property);
   return (
     <div>
       <Head>
@@ -19,10 +20,9 @@ export default function Property({ property }) {
   );
 }
 
-export async function getServerSideProps({ params }) {
-  const { slug } = params;
+export async function getStaticPaths() {
   const response = await fetch(
-    `${process.env.STRAPI_BASE_URL}/slugify/slugs/property/${slug}`,
+    `${process.env.STRAPI_BASE_URL}/properties?populate=*`,
     {
       headers: {
         Authorization: `Bearer ${process.env.STRAPI_AUTH_TOKEN}`,
@@ -30,12 +30,35 @@ export async function getServerSideProps({ params }) {
     }
   );
 
-  console.log("response");
-  console.log(response);
+  const data = await response.json();
+
+  const paths = data?.data.map((property) => ({
+    params: { slug: property.attributes.slug },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export const getStaticProps = async ({ params }) => {
+  const { slug } = params;
+  const response = await fetch(
+    `${process.env.STRAPI_BASE_URL}/properties?filters[slug][$eq]=${slug}&populate=fotos`,
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.STRAPI_AUTH_TOKEN}`,
+      },
+    }
+  );
+
+  const data = await response.json();
 
   return {
     props: {
-      property: response.data ? response.data : null,
+      property: data?.data ? data?.data[0] : null,
     },
+    revalidate: 150,
   };
-}
+};

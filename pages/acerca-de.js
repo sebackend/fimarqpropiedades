@@ -1,32 +1,45 @@
 import Head from "next/head";
 import markdownToHtml from "../lib/markdownToHtml";
+import Image from "next/image";
 
 export default function About({ company, aboutUs }) {
   return (
-    <div>
+    <div className="row">
       <Head>
         <title>Acerca de</title>
       </Head>
 
-      <main>
-        <section className="row mt-5">
-          <div className="col-12 p-5">
-            {aboutUs.length ? (
-              <div dangerouslySetInnerHTML={{ __html: aboutUs }}></div>
-            ) : null}
+      <section className="col-12 px-0">
+        {company?.banner?.data?.attributes ? (
+          <div style={{ width: "100%", height: "300px", position: "relative" }}>
+            <Image
+              src={company?.banner?.data?.attributes.url}
+              alt="banner"
+              layout="fill"
+            />
           </div>
-        </section>
-      </main>
+        ) : null}
+      </section>
+      <section className="row mt-5">
+        <div className="col-12 p-5">
+          {aboutUs.length ? (
+            <div dangerouslySetInnerHTML={{ __html: aboutUs }}></div>
+          ) : null}
+        </div>
+      </section>
     </div>
   );
 }
 
 export const getStaticProps = async () => {
-  const response = await fetch(`${process.env.STRAPI_BASE_URL}/companies`, {
-    headers: {
-      Authorization: `Bearer ${process.env.STRAPI_AUTH_TOKEN}`,
-    },
-  });
+  const response = await fetch(
+    `${process.env.STRAPI_BASE_URL}/companies?populate=*`,
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.STRAPI_AUTH_TOKEN}`,
+      },
+    }
+  );
 
   const data = await response.json();
   const company =
@@ -37,8 +50,6 @@ export const getStaticProps = async () => {
     Object.keys(company).length === 0
       ? ""
       : await markdownToHtml(company.acerca_de);
-
-  console.log(aboutUs);
 
   return {
     props: {

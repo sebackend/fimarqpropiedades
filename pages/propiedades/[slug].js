@@ -1,5 +1,8 @@
 import Head from "next/head";
+import Link from "next/link";
 import PropertyDetail from "../../components/PropertyDetail";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default function Property({ property }) {
   console.log(property);
@@ -10,7 +13,17 @@ export default function Property({ property }) {
       </Head>
 
       <main>
-        <section className="row mt-6">
+        <section className="row">
+          <div className="col-12 mt-5">
+            <Link href="/propiedades" passHref>
+              <h3 className="clickable btn btn-outline-primary">
+                <FontAwesomeIcon icon={faChevronLeft} color="#000" />
+                <span className="mx-2">Volver</span>
+              </h3>
+            </Link>
+          </div>
+        </section>
+        <section className="row">
           <div className="col-12">
             <PropertyDetail property={property} />
           </div>

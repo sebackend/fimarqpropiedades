@@ -1,14 +1,23 @@
-export default function PropertyDetail({ property }) {
-  const { fotos: photos } = property.attributes;
+import formatPriceNumber from "../../lib/formatPriceNumber";
 
-  console.log("property");
-  console.log(property.attributes.detalle);
+const propertyPrice = (currency, price) => {
+  if (currency === "CLP") return `$ ${formatPriceNumber(price, 0, ",", ".")}`;
+  if (currency === "UF") return `$ ${formatPriceNumber(price, 2, ",", ".")}`;
+  return "";
+};
+
+export default function PropertyDetail({ property }) {
+  const { fotos: photos, moneda, precio } = property.attributes;
+
+  console.log("property attributes");
+  console.log(property.attributes);
 
   return (
     <>
       <section className="row">
         <div className="col-12">
           <h1 className="text-center">{property.attributes.titulo}</h1>
+          <h3 className="text-center">{propertyPrice(moneda, precio)}</h3>
         </div>
 
         <div className="col-6 mt-5">

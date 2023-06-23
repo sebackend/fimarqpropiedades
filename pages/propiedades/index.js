@@ -17,7 +17,7 @@ export default function Properties({ properties }) {
 
         <section className="row mt-3 p-5">
           {properties.map((property) => (
-            <div className="col-12 col-md-4" key={property.id}>
+            <div className="col-12 col-md-3" key={property.id}>
               <PropertyCard
                 slug={property.attributes.slug}
                 property={property.attributes}

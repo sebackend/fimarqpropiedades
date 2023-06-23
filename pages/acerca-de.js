@@ -1,8 +1,7 @@
 import Head from "next/head";
-import markdownToHtml from "../lib/markdownToHtml";
 import Image from "next/image";
 
-export default function About({ company, aboutUs }) {
+export default function About({ company }) {
   return (
     <div className="row">
       <Head>
@@ -22,8 +21,8 @@ export default function About({ company, aboutUs }) {
       </section>
       <section className="row mt-5">
         <div className="col-12 p-5">
-          {aboutUs.length ? (
-            <div dangerouslySetInnerHTML={{ __html: aboutUs }}></div>
+          {company.acerca_de.length ? (
+            <div dangerouslySetInnerHTML={{ __html: company.acerca_de }}></div>
           ) : null}
         </div>
       </section>
@@ -46,15 +45,10 @@ export const getStaticProps = async () => {
     data?.data && data.data[0] && data.data[0]?.attributes
       ? data.data[0].attributes
       : {};
-  const aboutUs =
-    Object.keys(company).length === 0
-      ? ""
-      : await markdownToHtml(company.acerca_de);
 
   return {
     props: {
       company,
-      aboutUs,
     },
     revalidate: 150,
   };

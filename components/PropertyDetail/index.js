@@ -39,7 +39,7 @@ export default function PropertyDetail({ property }) {
         />
 
         <div className="col-12 col-md-6">
-          <PropertyDetailTable property={property} />
+          <PropertyDetailTable property={property.attributes} />
         </div>
       </section>
       <section className="row mt-5">

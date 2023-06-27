@@ -1,5 +1,6 @@
 // @import 'bootstrap/scss/bootstrap.scss';
 @import 'bootstrap.css';
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
 
 .main-container {
   padding-bottom: 20rem;
@@ -153,4 +154,11 @@
 
 .property-card {
   text-decoration: none;
+}
+
+.centered-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

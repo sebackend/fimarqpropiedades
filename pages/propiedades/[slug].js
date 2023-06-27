@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default function Property({ property }) {
-  console.log(property);
   return (
     <div>
       <Head>
@@ -58,7 +57,7 @@ export async function getStaticPaths() {
 export const getStaticProps = async ({ params }) => {
   const { slug } = params;
   const response = await fetch(
-    `${process.env.STRAPI_BASE_URL}/properties?filters[slug][$eq]=${slug}&populate=fotos`,
+    `${process.env.STRAPI_BASE_URL}/properties?filters[slug][$eq]=${slug}&populate=fotos,portada`,
     {
       headers: {
         Authorization: `Bearer ${process.env.STRAPI_AUTH_TOKEN}`,

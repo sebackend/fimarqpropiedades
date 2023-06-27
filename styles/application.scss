@@ -10,6 +10,10 @@
   cursor: pointer;
 }
 
+.red-bg {
+  background-color: #7e1e17;
+}
+
 .main-header {
   height: 85px;
   background-color: black;
@@ -80,7 +84,7 @@
 }
 
 .properties-container{
-  background-color: #7e1e17;
+  @extend .red-bg;
   padding: 5rem 2rem;
   margin-top: 5rem;
 }

@@ -12,7 +12,7 @@ export default function Property({ property }) {
       </Head>
 
       <main>
-        <section className="row">
+        {/* <section className="row">
           <div className="col-12 mt-5">
             <Link href="/propiedades" passHref>
               <h3 className="clickable btn btn-outline-primary">
@@ -21,12 +21,8 @@ export default function Property({ property }) {
               </h3>
             </Link>
           </div>
-        </section>
-        <section className="row">
-          <div className="col-12">
-            <PropertyDetail property={property} />
-          </div>
-        </section>
+        </section> */}
+        <PropertyDetail property={property} />
       </main>
     </div>
   );

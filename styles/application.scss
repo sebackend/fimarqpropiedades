@@ -74,13 +74,13 @@
   background-color: rgb(37, 211, 102);
   position: relative;
   border-radius: 50%;
-  box-shadow: 1px 1px 4px rgb(60 60 60 / 40%);
   transition: box-shadow .2s;
   cursor: pointer;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 1px 10px 20px -3px rgba(28, 21, 21, 0.78);
 }
 
 .properties-container{

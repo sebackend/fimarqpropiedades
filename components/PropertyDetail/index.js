@@ -2,9 +2,15 @@ import PropertyGallery from "../PropertyGallery";
 import PropertyDetailTable from "../PropertyDetailTable";
 import formatPriceNumber from "../../lib/formatPriceNumber";
 
+const propertyDecimals = (price) => {
+  if (parseFloat(price) > parseInt(price)) return 2;
+  return 0;
+};
+
 const propertyPrice = (currency, price) => {
   if (currency === "CLP") return `$ ${formatPriceNumber(price, 0, ",", ".")}`;
-  if (currency === "UF") return `$ ${formatPriceNumber(price, 2, ",", ".")}`;
+  if (currency === "UF")
+    return `UF ${formatPriceNumber(price, propertyDecimals(price), ",", ".")}`;
   return "";
 };
 

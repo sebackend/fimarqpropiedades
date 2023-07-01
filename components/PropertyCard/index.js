@@ -46,7 +46,7 @@ export default function PropertyCard({ slug, property }) {
                 </h4>
               </div>
 
-              <div className="col-4 pe-0">
+              <div className="col-12 pe-0">
                 <span>
                   <FontAwesomeIcon
                     icon={faRulerCombined}
@@ -54,26 +54,6 @@ export default function PropertyCard({ slug, property }) {
                     className="me-2"
                   />
                   {property.metros_utiles} m&sup2;
-                </span>
-              </div>
-              <div className="col-4 text-center">
-                <span>
-                  <FontAwesomeIcon
-                    icon={faBed}
-                    color="black"
-                    className="me-2"
-                  />
-                  {property.nro_habitaciones}
-                </span>
-              </div>
-              <div className="col-4 text-center">
-                <span>
-                  <FontAwesomeIcon
-                    icon={faBath}
-                    color="black"
-                    className="me-2"
-                  />
-                  {property.nro_banos}
                 </span>
               </div>
             </div>

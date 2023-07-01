@@ -24,6 +24,17 @@ export default function Home() {
         <div className="col-12 mt-55">
           <Properties />
         </div>
+
+        <div className="col-12 mt-55">
+          {/* TODO: Convertir a componente */}
+          {/* <section className="row">
+            <div className="col-12 mt-5">
+              <h2 className="text-center">Últimos artículos</h2>
+            </div>
+
+            <div className="col-12 mt-55"></div>
+          </section> */}
+        </div>
       </main>
     </>
   );

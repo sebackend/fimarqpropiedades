@@ -133,7 +133,7 @@ const tableForApartment = (property) => {
   );
 };
 
-const tableForParcela = () => {
+const tableForParcela = (property) => {
   const {
     tipo,
     nro_habitaciones,

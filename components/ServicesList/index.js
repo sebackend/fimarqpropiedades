@@ -9,11 +9,12 @@ export default function ServicesList() {
   return (
     <>
       <div className="row">
-        <div className="col-12">
+        <div className="col-12 mt-5">
           <h2 className="text-center">Nuestros Servicios</h2>
         </div>
       </div>
-      <section className="row mt-5">
+
+      <section className="row mt-55">
         <div className="col-12 col-md-4">
           <div className="card mb-3">
             <div className="card-body text-center px-5 py-5">

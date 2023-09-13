@@ -3,7 +3,7 @@ import Carousel from "../components/Carousel";
 import ServicesList from "../components/ServicesList";
 import Properties from "../components/Properties";
 
-export default function Home() {
+export default function Home({ slides }) {
   return (
     <>
       <Head>
@@ -14,7 +14,7 @@ export default function Home() {
 
       <main className="row">
         <div className="col-12 px-0">
-          <Carousel />
+          <Carousel slides={slides} />
         </div>
 
         <div className="col-12 mt-55">
@@ -39,3 +39,23 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  const response = await fetch(
+    `${process.env.STRAPI_BASE_URL}/slides?populate=*`,
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.STRAPI_AUTH_TOKEN}`,
+      },
+    }
+  );
+
+  const data = await response.json();
+
+  return {
+    props: {
+      slides: data?.data ? data?.data || [] : [],
+    },
+    revalidate: 150,
+  };
+};

@@ -5,7 +5,7 @@ export default function NavbarTop() {
   const router = useRouter();
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light main-navbar">
+    <nav className="navbar navbar-expand-lg bg-light main-navbar">
       <div className="container-fluid">
         <button
           className="navbar-toggler"

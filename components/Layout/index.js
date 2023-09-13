@@ -19,8 +19,8 @@ const Layout = ({ children }) => {
       </Head>
 
       <Header />
-      <LogoHeader />
       <NavbarTop />
+      <LogoHeader />
       <div className="container-fluid main-container">{children}</div>
       <Footer />
       <WhatsappButton phoneNumber={"+56952294649"} />

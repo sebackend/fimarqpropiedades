@@ -29,6 +29,7 @@
 }
 
 .logo-header {
+  margin-top: 1.5rem;
   border-bottom: 1px solid #f3f3f3;
   height: 200px;
 }
@@ -153,7 +154,7 @@
 }
 
 .main-navbar {
-  border-bottom: 1px solid #f3f3f3;
+  border-bottom: 1px solid #d5d5d5;
 }
 
 .property-card {
@@ -165,4 +166,28 @@
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+.navbar-nav {
+  .nav-link {
+    border: 2px solid #ffffff;
+    padding: 0.75rem 1.5rem;
+    color: hsl(0, 0%, 40%);
+
+    &:hover{
+      border: 2px solid #000;
+      color: #ffffff;
+      background-color: #000;
+    }
+
+    &.active{
+      color: #000;
+      border: 2px solid #000;
+
+      &:hover{
+        color: #ffffff;
+        background-color: #000;
+      }
+    }
+  }
 }

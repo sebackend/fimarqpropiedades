@@ -15,8 +15,8 @@ export default function Carousel({ slides }) {
               type="button"
               data-bs-target="#mainCarousel"
               data-bs-slide-to={index}
-              className="active"
-              aria-current="true"
+              className={`${index === 0 ? "active" : ""}`}
+              aria-current={index === 0 ? true : false}
               aria-label={slide.attributes.titulo}
             ></button>
           ))}
@@ -27,7 +27,7 @@ export default function Carousel({ slides }) {
             <div
               key={slide.id}
               className={`carousel-item ${index === 0 ? "active" : ""}`}
-              data-bs-interval="7000"
+              data-bs-interval="6000"
             >
               <div>
                 <Image
